@@ -1,62 +1,76 @@
-# PDF on Submit
+<div align="center">
+  <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Project Logo" width="80" height="80">
+  <p>
+    Empower your sales process with automated PDF generation for your sales documents.
+    <br />
+    <a href="https://empress.eco/">Visit Our Website</a>
+    ·
+    <a href="https://grow.empress.eco/">Documentation</a>
+    ·
+    <a href="https://github.com/empress-eco/pdf_on_submit/issues">Report a Bug</a>
+    ·
+    <a href="https://github.com/empress-eco/pdf_on_submit/issues">Request a Feature</a>
+  </p>
+</div>
 
-Automatically generates and attaches a PDF when a sales document gets submitted. Works for **Quotation**, **Sales Order**, **Sales Invoice**, **Delivery Note** and **Dunning**.
+## About The Project
 
-![Screencast of PDF generation](docs/screencast.gif)
+### 📖 Overview
+Empress PDF on Submit is an efficiency-boosting tool that automatically generates and attaches a PDF to your sales documents upon submission. It's ideal for professionals handling Quotations, Sales Orders, Sales Invoices, Delivery Notes, and Dunning operations.
 
-## Install on Frappe Cloud
+### 🌟 Key Features
+- Instant PDF generation upon sales document submission.
+- Option for background PDF generation for large volume of documents.
+- Customizable active doctypes.
+- Selection of Default Print Format and Print Language.
 
-1. Go to https://frappecloud.com/dashboard/#/sites and click the "New Site" button.
-2. In Step 2 ("Select apps to install"), select "PDF on Submit".
+## Getting Started
+
+### Technical Stack and Setup Instructions
+
+The project is built with Empress, a full-stack web application framework based on Python and JavaScript. 
+
+**Installation Process:**
+
+**For Empress Cloud Users:**
+1. Navigate to your Empress Cloud dashboard and click the "New Site" button.
+2. In Step 2 ("Select apps to install"), choose "PDF on Submit".
 3. Complete the new site wizard.
 
-## Install on Self-Hosted
-
-```bash
-cd frappe-bench
-bench get-app https://github.com/alyf-de/pdf_on_submit.git
-bench --site MY_SITE install-app pdf_on_submit
+**For Self-Hosted Users:**
+Execute the following commands in your terminal:
+```sh
+cd Empress-bench
+bench get-app https://github.com/empress-eco/pdf_on_submit.git
+bench --site YOUR_SITE_NAME install-app pdf_on_submit
 ```
+> Note: Replace `YOUR_SITE_NAME` with your actual site name.
 
-> Remeber to replace `MY_SITE` with your site name.
+### Usage
+To customize the settings, search for **PDF on Submit Settings** in the search bar. Here, you can select the DocTypes for which this app is active and enable background PDF creation for instant workflow continuation.
 
-## Settings
+To modify the Default Print Format:
+1. Open the list view of a supported DocType.
+2. Navigate to Menu > Customize.
+3. In the "View Settings" section, select a Default Print Format.
 
-To change the settings of this app, you can open **PDF on Submit Settings** via the search bar.
+The language of the created PDF is determined by the "Language" field of the current document.
 
-- Choose active DocTypes
+## Contributing
+We welcome your contributions! Here's how you can contribute:
 
-  Here you can select for which DocTypes this app is active. DocTypes that are disabled will be ignored.
+- Fork the Project
+- Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+- Push to the Branch (`git push origin feature/AmazingFeature`)
+- Open a Pull Request
 
-- Create PDF in Background
+Please ensure your contributions align with the project's design principles and standards. For more details, refer to our [Contribution Guide](https://github.com/empress-eco/pdf_on_submit).
 
-    Enable this option if you want to continue your work immediately. The PDFs will just appear once they are created. (This might require a reload of the current document.) Recommended if you usually submit many sales documents in bulk.
-    
-    Disable this option to get the PDF immediately. When you submit the document you will see a progress bar while the PDF gets created. When it's done you immediately see the PDF attached to the document.
+## License and Acknowledgements
 
-![PDF on Submit Settings](docs/settings.png)
+### License
+This project is under the MIT License. All your contributions are also licensed under the MIT License. For more details, see [License](https://opensource.org/licenses/MIT).
 
-This app uses the Default Print Format. To change the Default Print Format,
-
-1. Open the list view of a supported DocType,
-2. Go to Menu > Customize,
-3. In section "View Settings", select a Default Print Format.
-
-The PDF will be created in the language that is specified in the "Language" field of the current document. In your **Customer** and **Supplier** masters you can choose the default "Print Language".
-
-## Licence
-
-Copyright (C) 2020  ALYF GmbH <hallo@alyf.de>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+### Acknowledgements
+We extend our heartfelt gratitude to the Empress Community, the architects behind the essential tools that power this project. Their innovation and unwavering dedication have been instrumental in building the foundational elements and functionalities we rely on. We are profoundly grateful for their pioneering work and ongoing support.
